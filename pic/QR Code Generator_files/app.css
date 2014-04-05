@@ -1,0 +1,257 @@
+
+.vis_outer_wrapper {
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.vis_inner_wrapper {
+    clear:both;
+    width: 400px;
+    height: 234px;
+
+    float: left;
+    position: relative;
+    padding-left: 35px;
+}
+
+.vis_top_text {
+
+    color:#6a6a6a;
+
+    font-size: 26px;
+    float:left;
+    font-family: paprika, Tahoma, Geneva, sans-serif;
+    padding-bottom: 10px;
+    margin-left:10px;
+    padding-left:48px;
+}
+
+.vis_center_image {
+    width: 352px;
+    height: 160px;
+    overflow: hidden;
+    float: left;
+    margin-left: 21px;
+
+}
+
+a.vis_center_cta {
+    width: 177px;
+    text-decoration: none;
+    height: 35px;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+
+    margin-left: 16px;
+    margin-top: 3px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 20px;
+    background: url(../img/qurify_half_CTA.png) center top no-repeat;
+}
+a.vis_center_cta_second{
+     width: 300px;
+    text-decoration: none;
+    height: 30px;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    margin-left:90px;
+     font-weight: 500;
+    margin-top: 3px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 26px;
+    background: url(../img/btn_normal.png) center top no-repeat;
+}
+a.vis_center_cta_second:hover{
+    background: url(../img/btn_selected.png) center top no-repeat;
+    text-decoration: none;
+    color:#fff;
+}
+.vis_bottom_logo {
+   width: 110px;
+height: 25px;
+position: absolute;
+right: 35px;
+bottom: 50px;
+background: white;
+}
+
+.vis_bottom_logo a img {
+    border: none;
+    text-decoration: none;
+}
+
+a.vis_center_cta:hover {
+    background-position: 0px -46px;
+}
+
+a.vis_center_cta:active {
+    background-position: 0px -92px;
+}
+
+#vis_bottom_text_holder {
+    float: left;
+    width: 330px;
+     margin-top: 25px;
+
+}
+
+.vis_bottom_text {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    color: #6A6A6A;
+
+    margin-left: 30px;
+    margin-bottom: 11px;
+}
+
+#vis_bottom_text_holder h2 {
+     font-family: 'Satisfy', serif;
+    color: #df0091;
+    font-size: 24px;
+    font-weight: normal;
+    margin-left:20px;
+    margin-bottom: 10px;
+}
+
+#qur_outer_wrapper {
+    width: 480px;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin-top: 30px;
+}
+
+#qur_inner_wrapper {
+    width: 395px;
+    height: 234px;
+    border: 1px solid #000;
+    float: left;
+    position: relative;
+}
+
+.qur_top_text {
+    position: absolute;
+    top: -8px;
+    background: #fff;
+    left: 10px;
+    font-size: 12px;
+    font-family: paprika, Tahoma, Geneva, sans-serif;
+}
+
+.qur_center_image {
+    width: 352px;
+    height: 160px;
+    overflow: hidden;
+    float: left;
+    margin-left: 21px;
+    margin-top: 20px;
+}
+
+a.qur_center_cta {
+    width: 177px;
+    text-decoration: none;
+    height: 35px;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 16px;
+  /*  margin-top: 3px; */
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 20px;
+    background: url(../img/qurify_half_CTA.png) center top no-repeat;
+}
+
+.qur_bottom_logo {
+    width: 110px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    background: #fff;
+}
+
+.qur_bottom_logo a img {
+    border: none;
+    text-decoration: none;
+}
+
+a.qur_center_cta:hover {
+    background-position: 0px -46px;
+}
+
+a.qur_center_cta:active {
+    background-position: 0px -92px;
+}
+
+#qur_bottom_text_holder {
+    float: left;
+    width: 395px;
+}
+
+.qur_bottom_text {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin-left: 20px;
+    margin-bottom: 11px;
+}
+
+#qur_bottom_text_holder h1 {
+    font-family: paprika, Tahoma, Geneva, sans-serif;
+    color: #0489b7;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.satisfy {
+font-family: 'Satisfy', serif;
+font-size: 30px;
+}
+.pad-left{
+    margin-left:120px;
+    padding-top:10px;
+}
+.shadow{
+
+-webkit-box-shadow: 100px 100px 5px -100px #888;
+	   -moz-box-shadow:  100px 100px 5px -100px #888;
+	        box-shadow:  100px 100px 5px -100px #888;
+}
+.shadow_small{
+     -moz-box-shadow:    6px 8px 3px -2px #888;
+  -webkit-box-shadow: 6px 8px 3px -2px #888;
+  box-shadow:         6px 8px 3px -2px #888;
+}
+.float_1{
+    margin-left: 175px;
+position: absolute;
+margin-top: -10px;
+}
+.float_2{
+    margin-left:140px;
+}
+.step_visual{
+    clear:both;padding-left:20px;padding-top:40px;float:left
+}
+.step_analytics{
+    float:left;margin-top:80px
+}
+.step_edit{
+  float:left;margin-top:160px;
+
+}
+.simple_text{
+    color:#6A6A6A;font-size:18px;font-weight: 500;
+}
+.second_stage_father{
+
+}
