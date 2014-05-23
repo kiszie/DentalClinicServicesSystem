@@ -32,7 +32,7 @@
         <nav>
             <ul>
                 <li>
-                  <a href="search.html">Informaion</a>
+                  <a href="#">Informaion</a>
                   
                 </li>
                 <li><a href="search.html">Appointment</a></li>

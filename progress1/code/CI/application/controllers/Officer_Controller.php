@@ -145,4 +145,8 @@ public function myfunction(){
 			$this->load->view('calendar.html',$data);
 			
 		}
+		
+		function callCalendar(){
+			$this->load->view('c_view.html');
+			}
 	}

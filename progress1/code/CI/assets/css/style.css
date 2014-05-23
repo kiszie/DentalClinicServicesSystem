@@ -154,7 +154,7 @@ div.right {font-size:1.167em;padding-top:10px;width:350px;}
 	.safe {float:left;margin:10px 0px;}
 	
 /*** Login ***/
-#login form, #login section {float:left;width:220px;height:200px;margin:10px 0px;padding:49px;border:1px solid #ececec;}
+#login form, #login section {float:left;width:220px;height:200px;margin:10px 0px;padding:49px;border:1px solid #ececec; position:absolute;}
 #login section {border-left:none;background:#f5f5f5;padding:69px 49px 29px;}
 	#login h1, #login h2 {font-family: 'Terminal Dosis', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:2em;font-weight:300;}
 	#login p {margin:16px 0px;}
