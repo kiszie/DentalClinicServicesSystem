@@ -1,0 +1,60 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	
+    <style type="text/css">
+	.calendar{
+		font-family:Arial;	   font-size:12px;
+	}
+	table.calendar{
+	margin:auto;   border-collapse: collapse;
+	}
+	.calendar .days td{
+		width:80 px; height:80px; padding:4px;
+		border:5px; solid:#999;
+		vertical-align:top;
+		background-color:#DEF;
+	}
+	.calendar  .days td:hover{
+	background-color:#F66;
+	}
+	.calendar .highlight {
+	font-weight:bold; color:#FFF;
+	}
+
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<?php echo $calendar;?>
+        <script type="text/javascript">
+		$(document).ready(function() {
+            $('.calendar .day').click(function(){
+				day_num = $(this).find('.day_num').html();
+				day_data = prompt('Enter stuff',$(this).find('.content').html());  
+				
+				if(day_data!=null){
+				
+				$.ajax({
+					url: window.location,
+					type: 'POST' ,
+					data:{
+						day:day_num,
+						data:day_data
+				},
+				success:function(msg){
+				location.reload();
+				}
+				  });
+				}
+			});
+        });
+        
+</script>
+</body>
+
+</html>
