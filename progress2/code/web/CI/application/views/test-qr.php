@@ -6,27 +6,20 @@
 </head>
 
 <body>
-	<div id="qrcode">
-    </div>
+	
     
-<script src="jquery.qrcode.min.js"></script>  
-<script type="text/javascript">
-//Wrap it within $(document).ready() to invoke the function after DOM loads.
- 
-$(document).ready(function(){
- 
-$('#qrcodeholder').qrcode({
-        text    : "http://www.moreonfew.com/generate-qr-code-using-jquery",
-        render    : "canvas",  // 'canvas' or 'table'. Default value is 'canvas'
-        background : "#ffffff",
-        foreground : "#000000",
-        width : 150,
-        height: 150
-    });
- 
-});
- 
-</script>
+<?php 
+
+	include('/.../libraries/phpqrcode/qrlib.php');
+	include('config.php');
+	$tempDir = EXAMPLE_TMP_SERVERPATH;
+	$phoneNo = '(085)867-2122';
+	$codeContents = 'tel: '.$phoneNo;
+	
+	QRcode::png($codeContents, $tempDir.'020.png', QR_ECLEVEL_L, 3);
+	echo '<img src="'.EXAMPLE_TMP_URLRELPATH.'020.png" />';
+	
+ ?>
 </body>
 
 </html>

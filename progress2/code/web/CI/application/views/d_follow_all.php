@@ -131,7 +131,27 @@ No data
 <?php else: ?>
 No data
 <?php endif; ?>
+<tr>
+<th>Retainer</th>
+<th> </th>
+<th> </th>
+<th>Follow Up</th>
+<tr>
+<?php if ( isset($user) && is_array($user) ): ?>
 
+<?php foreach ( $user as $key ): ?>
+<?php if($key->treatment=='Retainer'):?>
+<td><?php echo $key->patientID?></td>  
+<td><?php echo $key->f_name?></td>
+<td> </td>
+<td><a href="<?php echo base_url();?>index.php/Dentist_Controller/follow_up/<?php echo $key->patientID;?>"/>Follow up</a></td>
+<?php endif; ?>
+</tr>
+<?php endforeach; ?>
+
+<?php else: ?>
+No data
+<?php endif; ?>
 </table>
 </div>
 

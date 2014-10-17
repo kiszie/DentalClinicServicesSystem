@@ -237,10 +237,59 @@ class Officer_manage extends CI_controller{
 		$result=$this->Offiecer_Model->getInfoByInfoId($infoID);
 		return $result;
 		}
-	public function edit_information($data){
+	public function edit_info_data($data){
 		$this->load->model('Offiecer_Model');
 		$result=$this->Offiecer_Model->edit_information($data);
 		return $result;
 		}
+	public function delete_info($infoID){
+		$this->load->model('Offiecer_Model');
+		$result=$this->Offiecer_Model->delete_info($infoID);
+		return $result;
+		}
+	public function p_detail($patientID){
+		$this->load->model('Offiecer_Model');
+		$data['user']=$this->Offiecer_Model->get_p_DataById($patientID);
+		return $data['user'];
+		}
+	public function gen_qr($patientID){
+		$this->load->library('ciqrcode');
+		//$name=$patientID;
+		$params['data'] = $patientID;
+		$params['level'] = 'H';
+		$params['size'] = 4;
+		$params['savename'] = FCPATH.'test.png';
+		return $this->ciqrcode->generate($params);
+		//print_r($params['data']);
+		}
+	public function check_time($pid){
+		$this->load->helper('date');
+		$timestring = "%h:%i:%s";
+		$time = time();
+		$data['time'] = mdate($timestring, $time);
+		$datestring = "%Y-%m-%d";
+		$data['date'] = mdate($datestring, $time);
+		$data['pid'] = $pid;
+		$result = array();
+		$data['appointment']=$this->patientCalendar($pid);
+		if($data['appointment']!=null){
+		foreach ($data['appointment'] as $key => $value) {
+			
+				if($value->aDate==$data['date']){
+					if($value->startTime>=$data['datetime']){
+   						$result[] = $value->startTime;
+					}
+					}
+				else{
+					return "not today";
+					}
+				}
+		}
+		else{
+			return "no appointment";
+			}
+		return $result;
+		}
+		
 	}
 ?>

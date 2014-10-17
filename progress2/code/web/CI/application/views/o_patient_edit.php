@@ -125,7 +125,21 @@ $('#tabs').tabs();
         
          <p>
             <label for="treatment">Dental Treatment:</label>
-          <input id="treatment" name="treatment" type="text" value="<?php echo $user['treatment'];?>" required><span class="alert">*</span>
+         <select id="gender" name="gender" onchange="javascript:startDisplay();" value="<?php echo $user['treatment'];?>" required>
+                <option value="Full mouth checkup">Full mouth checkup</option>
+                <option value="Composite filling">Composite filling</option>
+                <option value="Fluoride application">Fluoride application</option>
+                <option value="Consultation">Consultation</option>
+                <option value="Extraction">Extraction</option>
+                <option value="Root curette">Root curette</option>
+                <option value="Intraoral x-ray">Intraoral x-ray</option>
+                <option value="Regular cleaning">Regular cleaning</option>
+                <option value="Whitening/Bleaching">Whitening/Bleaching</option>
+                <option value="Braces">Braces</option>
+                <option value="EF line">EF line</option>
+                <option value="Retainer">Retainer</option>
+
+            </select><span class="alert">*</span>
         </p>
    	  <p>&nbsp;</p>
         

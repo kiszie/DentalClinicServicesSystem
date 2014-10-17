@@ -96,8 +96,9 @@ addthisevent.settings({
    ?>
    </div>
 </aside>
-
-<a href="#"><img src="../../images/DCSS-logo-web.jpg" /></a>
+<div class="wrapper" >
+<a href="#"><img src="<?php echo base_url('images/DCSS-logo-web.jpg'); ?>" /></a>
+</div>
 
 
 <!--<footer>

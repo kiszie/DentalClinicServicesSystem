@@ -74,7 +74,7 @@ addthisevent.settings({
         </nav>
     </div>
 </header>
-<aside id="top">
+<?php /*?><aside id="top">
 	<div class="wrapper">
         <ul id="social">
             <li><a href="#" class="facebook" title="like us us on Facebook">like us us on Facebook</a></li>
@@ -93,8 +93,8 @@ addthisevent.settings({
     }
    
    ?>
-   </div><?php */?>
-</aside>
+   </div>
+</aside><?php */?>
 
 <div class="wrapper" >
 <table>

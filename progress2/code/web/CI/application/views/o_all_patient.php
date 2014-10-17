@@ -112,7 +112,7 @@ addthisevent.settings({
 <tr>
 <?php if ( isset($user) && is_array($user) ): ?>
 <?php foreach ( $user as $key ): ?>
-<td><a href="<?php echo base_url();?>index.php/Officer_Controller/patientCalendar/<?php echo $key->patientID;?>"/><?php echo $key->patientID;?></a></td>  
+<td><a href="<?php echo base_url();?>index.php/Officer_Controller/p_detail/<?php echo $key->patientID;?>"/><?php echo $key->patientID;?></a></td>  
 <td><?php echo $key->f_name?></td>
 <td><?php echo $key->l_name?></td>
 <td><?php echo $key->age?></td>
@@ -121,6 +121,7 @@ addthisevent.settings({
 <td><?php echo $key->address?></td>
 <td><?php echo $key->tel?></td>
 <td><?php echo $key->email?></td>
+<td><a href="<?php echo base_url();?>index.php/Officer_Controller/patientCalendar/<?php echo $key->patientID;?>"/>appointment</a></td>
 <td><a href="<?php echo base_url();?>index.php/Officer_Controller/p_delete/<?php echo $key->patientID;?>"/>Delete</a></td>
 <td><a href="<?php echo base_url();?>index.php/Officer_Controller/p_edit/<?php echo $key->patientID;?>"/>Edit</a></td> 
 </tr>

@@ -402,6 +402,12 @@ class Offiecer_Model extends CI_Model {
 		$this->db->update('information', $data);
 		return true;
 		}
+	
+	public function delete_info($infoID){
+		$this->db->where('infoID',$infoID);
+   		$this->db->delete('information');
+		return true;
+	}
 }
 
 	

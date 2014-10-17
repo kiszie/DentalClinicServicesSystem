@@ -283,6 +283,7 @@ public function get_db(){
 		$this->load->view('o_make_appointment',$data3);
 		if($this->input->post('submit')){
 			$officer = new Officer_manage();
+			
 			$data = array(
     			'patientID'=> $this->input->post('patientID'),
 				'dentistID'=>$this->input->post('dentistID'),
@@ -360,9 +361,6 @@ public function get_db(){
 		$officer = new Officer_manage();
 		$data['user'] = $officer->get_db();
 		$this->load->view("view_d_calendar", $data);
-		}
-	public function check_qr(){
-		$this->load->view("test-qr");
 		}
 		
 	public function view_treatment_list(){
@@ -444,7 +442,7 @@ public function get_db(){
 			print_r($data);
 			$result = $officer->add_information($data);
 			if($result==true){
-				$data2['information'] = $officer->get_information();
+				$data2['info'] = $officer->get_information();
 				$this->load->view('o_all_info', $data2);
 				}
 			else{
@@ -475,17 +473,17 @@ public function get_db(){
 		$data3['ID']=$this->session->userdata('officer_id');
 		if($this->input->post('submit')){
 			$officer = new Officer_manage();
-			$data = array(
-    				'infoID'=> $this->input->post('infoID'),
-					'type'=> $this->input->post('type'),
-					'title'=> $this->input->post('title'),
-     				'details' => $this->input->post('details'),
-					'officerID'=> $this->input->post('officerID')
-     				);
+			$data['infoID']=$this->input->post('infoID');
+			$data['type']=$this->input->post('type');
+			$data['title']=$this->input->post('title');
+			$data['details']=$this->input->post('details');
+			$data['officerID']=$this->input->post('officerID');
 			print_r($data);
-			$result = $officer->edit_information($data);
+			$result = $officer->edit_info_data($data);
 			if($result==true){
-				$data2['information'] = $officer->get_information();
+				$data2['info'] = $officer->get_information();
+				print_r($data2);
+				//print_r($data2);
 				$this->load->view('o_all_info', $data2);
 				}
 			else{
@@ -493,6 +491,68 @@ public function get_db(){
 				}
 			}
 		}
+	public function delete_info($infoID){
+		$officer = new Officer_manage();
+		$result = $officer->delete_info($infoID);
+		if($result==true){
+			$data['info']=$officer->view_appointment();
+			$this->load->view('o_all_info',$data);
+			}
+		}
+	public function view_info_page(){
+		$officer = new Officer_manage();
+		$data['info'] = $officer->get_information();
+		$this->load->view('o_view_info',$data);
+		}
+	/*This is the same in manage.
+	public function gen_qr($patientID){
+		$officer = new Officer_manage();
+		$officer->gen_qr($patientID);
+		$this->load->view('o_qr');
+		//echo '<img src="'.base_url().'tes.png" />';
+		}*/
+	public function p_detail($patientID){
+		
+			$officer = new Officer_manage();
+			$data['user'] = $officer->p_edit($patientID);
+			$officer->gen_qr($patientID);
+			$this->load->view('o_view_p',$data);
+	}
+/*	public function check_time(){
+		$officer = new Officer_manage();
+		$data['appointment']=$officer->view_appointment();
+	
+		//print_r($data+'</br>');
+		$this->load->helper('date');
+		$datestring = "%h:%i:%s";
+		$time = time();
+		$data['datetime'] = mdate($datestring, $time);
+		//print_r($data['datetime']);
+		$result = array();
+		foreach ($data['appointment'] as $key => $value) {
+			if($value->startTime>=$data['datetime']){
+   			$result[] = $value->startTime;
+		}
+		}
+		print_r($result);
+		
+		}*/
+	public function call_checktime(){
+		
+		$this->load->view('o_checktime');
+		}
+	public function check_time(){
+		$officer = new Officer_manage();
+		$data['result']=null;
+		if($this->input->post('submit')){
+			$pid=$this->input->post('patientID');
+			$result = $officer->check_time($pid);
+			//print_r($result);
+			$data['result']=$result;
+			$this->load->view('o_checktime_result',$data);
+			}
+		}
+		
 	}
 	
 	

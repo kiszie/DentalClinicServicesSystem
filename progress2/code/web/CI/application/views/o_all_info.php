@@ -113,7 +113,7 @@ addthisevent.settings({
 <td><?php echo $key->title?></td>
 <td><?php echo $key->details?></td>
 <td><?php echo $key->officerID?></td>
-<td><a href="<?php echo base_url();?>index.php/Officer_Controller/d_delete/"/>Delete</a></td>
+<td><a href="<?php echo base_url();?>index.php/Officer_Controller/delete_info/<?php echo $key->infoID;?>"/>Delete</a></td>
 <td><a href="<?php echo base_url();?>index.php/Officer_Controller/edit_info/<?php echo $key->infoID;?>"/>Edit</a></td> 
 </tr>
 <?php endforeach; ?>

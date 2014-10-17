@@ -87,6 +87,10 @@ $('#tabs').tabs();
 	<form id="form1" name="form1" method="post" action="<?php echo base_url();?>index.php/Officer_Controller/edit_info_data">
     	<h1>Add Information and Promotion</h1>
       
+      	  <p>
+          <label for="infoID">InfoID:</label>
+          <input id="infoID" name="infoID" type="text" value="<?php echo $info['infoID']?>" required><span class="alert">*</span>
+        </p>
 		<p>
           <label for="type">Type:</label>
           

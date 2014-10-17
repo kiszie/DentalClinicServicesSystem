@@ -132,14 +132,28 @@ $('#tabs').tabs();
         
          <p>
             <label for="treatment">Dental Treatment:</label>
-          <input id="treatment" name="treatment" type="text" required><span class="alert">*</span>
+           <select id="treatment" name="treatment" onchange="javascript:startDisplay();" required>
+                <option value="Full mouth checkup">Full mouth checkup</option>
+                <option value="Composite filling">Composite filling</option>
+                <option value="Fluoride application">Fluoride application</option>
+                <option value="Consultation">Consultation</option>
+                <option value="Extraction">Extraction</option>
+                <option value="Root curette">Root curette</option>
+                <option value="Intraoral x-ray">Intraoral x-ray</option>
+                <option value="Regular cleaning">Regular cleaning</option>
+                <option value="Whitening/Bleaching">Whitening/Bleaching</option>
+                <option value="Braces">Braces</option>
+                <option value="EF line">EF line</option>
+                <option value="Retainer">Retainer</option>
+
+            </select><span class="alert">*</span>
         </p>
    	  <p>&nbsp;</p>
         
    	  <p>
    	    <label>&nbsp;</label>
       </p>
-   	  <input type="submit" name="submit" class="continue"></input>
+   	  <input type="submit" name="submit" value="submit" class="continue"></input>
     </form>
     </form>
     

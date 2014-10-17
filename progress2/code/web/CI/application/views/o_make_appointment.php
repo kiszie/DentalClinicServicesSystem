@@ -66,7 +66,7 @@ $('#tabs').tabs();
         </nav>
     </div>
 </header>
-<aside id="top">
+<?php /*?><aside id="top">
 	<div class="wrapper">
         <ul id="social">
             <li><a href="#" class="facebook" title="like us us on Facebook">like us us on Facebook</a></li>
@@ -89,7 +89,7 @@ $('#tabs').tabs();
    ?>
    </div>
     
-</aside>
+</aside><?php */?>
 <script type="text/javascript" src="http://js.addthisevent.com/atemay.js"></script>
 <script type="text/javascript">
 addthisevent.settings({
